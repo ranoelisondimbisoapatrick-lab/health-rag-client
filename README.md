@@ -1,59 +1,46 @@
-# HealthRagClient
+Health RAG Client
+Frontend professionnel de l'application Health RAG AI. Développé avec Angular 17+, Tailwind CSS et l'architecture Standalone.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
+📋 Prérequis
+Node.js (v18+)
+Angular CLI (npm install -g @angular/cli)
+🚀 Installation
+Cloner le dépôt :
+git clone https://github.com/votre-username/health-rag-client.gitcd health-rag-client
+Installer les dépendances :
+npm install
+Lancer le serveur de développement :
 ng serve
-```
+L'application sera accessible sur http://localhost:4200.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🔌 Connexion Backend
+Ce Frontend est conçu pour se connecter à l'API FastAPI correspondante. L'URL de l'API est configurée dans src/core/services/rag.service.ts et src/core/services/auth.service.ts.
 
-## Code scaffolding
+Par défaut, elle pointe vers http://127.0.0.1:8000/api/v1.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Pour changer l'URL de production :
 
-```bash
-ng generate component component-name
-```
+Modifiez la variable apiUrl dans les services.
+Ou (recommandé) utilisez environment.ts pour gérer les environnements.
+🏗️ Architecture
+Le projet suit une architecture modulaire moderne :
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Standalone Components : Pas de NgModule.
+Signals : Gestion d'état réactive pour le chat et les formulaires.
+Features : Séparation claire entre Login et Dashboard.
+Core : Services globaux (AuthService, RagService, AuthGuard, AuthInterceptor).
+Interceptors : Injection automatique du JWT dans l'en-tête Authorization.
+🛠️ Stack Technique
+Framework : Angular 18+
+Langage : TypeScript
+Styling : Tailwind CSS (Configuration Standalone)
+HTTP : HttpClient avec Interceptors
+UI Components : Native Web Components (Pas de Material UI pour la légèreté)
+📦 Scripts utiles
+ng serve : Lance le serveur de développement.
+ng build --configuration production : Compile le projet pour le déploiement.
+ng lint : Vérifie la qualité du code.
+🔐 Sécurité
+Les routes sont protégées par un AuthGuard (auth.guard.ts).
+Le AuthInterceptor injecte automatiquement le token JWT stocké dans localStorage.
+Les mots de passe ne sont jamais stockés en clair (uniquement le token JWT).
