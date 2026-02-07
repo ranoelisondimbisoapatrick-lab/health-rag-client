@@ -8,6 +8,7 @@ import { RagService } from '../../core/services/rag.service';
   selector: 'app-dashboard',
   standalone: true,
   imports: [CommonModule, FormsModule],
+  templateUrl: './dashboard.component.html',
   template: `
     <div class="flex h-screen bg-gray-50 text-gray-800 font-sans">
       
