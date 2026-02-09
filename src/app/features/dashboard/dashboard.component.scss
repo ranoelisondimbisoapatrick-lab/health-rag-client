@@ -1,0 +1,37 @@
+.shell { height: 100vh; }
+.toolbar { position: sticky; top: 0; z-index: 10; }
+.spacer { flex: 1 1 auto; }
+.title { font-weight: 600; }
+
+.sidenav { width: 320px; }
+.side-head { padding: 16px; border-bottom: 1px solid rgba(0,0,0,0.12); }
+.brand { display: flex; gap: 12px; align-items: center; }
+.emoji { font-size: 24px; }
+.brand-title { font-weight: 700; }
+.brand-sub { font-size: 12px; opacity: 0.75; }
+
+.side-body { padding: 16px; }
+.stack { display: grid; gap: 12px; }
+.full { width: 100%; }
+.status { background: rgba(76, 175, 80, 0.08); }
+
+.chat { height: calc(100vh - 64px); display: grid; grid-template-rows: 1fr auto; }
+.messages { padding: 16px; overflow: auto; display: grid; gap: 12px; }
+.row { display: flex; justify-content: flex-start; }
+.row.me { justify-content: flex-end; }
+
+.bubble { max-width: min(720px, 90%); }
+.bubble.me { background: rgba(33, 150, 243, 0.12); }
+.bubble-content { white-space: pre-line; }
+.sender { font-size: 12px; font-weight: 700; opacity: 0.75; margin-bottom: 4px; }
+.text { font-size: 14px; }
+
+.loading { display: flex; gap: 10px; align-items: center; opacity: 0.8; }
+
+.composer { padding: 12px 16px; border-top: 1px solid rgba(0,0,0,0.12); background: #fff; }
+.composer-form { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
+
+@media (max-width: 600px) {
+  .sidenav { width: 280px; }
+  .composer-form { grid-template-columns: 1fr; }
+}

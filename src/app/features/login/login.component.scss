@@ -1,0 +1,37 @@
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-header {
+  padding-bottom: 8px;
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px 16px 0;
+}
+
+.full {
+  width: 100%;
+}
+
+.error {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(244, 67, 54, 0.12);
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
