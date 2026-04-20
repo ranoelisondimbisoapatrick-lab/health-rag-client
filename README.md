@@ -164,7 +164,7 @@ MIT License © 2026
 
 ## 👨‍💻 Auteur
 
-**RANOELISON Dimbisoa Adrianno**
-💼 Data Engineer | Expert Comptable | Dev IA
+**RANOELISON Dimbisoa Patrick**
+💼 Data Engineer | Full-Stack | Dev IA
 
 ---
